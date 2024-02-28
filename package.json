@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "chrome": "cypress run --browser chrome --headed",
+    "chromehl": "cypress run --browser chrome --headless",
+    "firefox": "cypress run --browser firefox --headed",
+    "firefoxhl": "cypress run --browser firefox --headless",
+    "test-mobile": "cypress run --browser chrome --headed --config-file cypress.mobile.config.js",
+    "test-laptop": "cypress run --browser chrome --headed --config-file cypress.config.js"
   },
   "keywords": [],
   "author": "",

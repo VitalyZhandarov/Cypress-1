@@ -20,6 +20,17 @@
     };
     cy.contains('Submit').click();
  })
+
+ Cypress.Commands.add('addBook', (title, description, authors) => {
+    cy.contains('Add new').click();
+    if(title) {
+        cy.get('#title').type(title);
+    };
+    cy.get('#description').type(description);
+    cy.get('#authors').type(authors);
+    cy.get('#favorite').click();
+    cy.contains('Submit').click();
+})
 //
 //
 // -- This is a child command --
